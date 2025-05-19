@@ -12,6 +12,7 @@
       text-align: center;
       background-color: #f5f5f5;
       color: #333;
+      position: relative;
     }
     header {
       padding: 10px 0;
@@ -39,7 +40,7 @@
       color: #555;
       animation: slideIn 1s ease-in;
     }
-    .achievements, .projects {
+    .achievements, .projects, .languages {
       margin: 20px 0;
     }
     .achievements ul, .projects ul {
@@ -65,6 +66,39 @@
     .projects a:hover {
       color: #ff5722;
     }
+    .languages {
+      margin: 20px 0;
+    }
+    .languages p {
+      margin: 10px 0;
+      background-color: #fff;
+      padding: 5px 10px;
+      border-left: 3px solid #0056b3;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .languages p:hover {
+      transform: translateX(5px);
+    }
+    .currently-building {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 1.5em;
+      color: #333;
+      background-color: #fff;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1.2em;
+      background-color: #333;
+      vertical-align: middle;
+      animation: blink 0.7s infinite;
+    }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -72,6 +106,10 @@
     @keyframes slideIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
     }
   </style>
 </head>
@@ -81,27 +119,34 @@
     <a href="https://x.com/ndemoss28">X</a> |
     <a href="https://www.linkedin.com/in/nate-demoss-5167a4268/">LINKEDIN</a>
   </header>
+  <div class="currently-building">
+    currently building<span class="cursor"></span>
+  </div>
   <div class="content">
     <h1>HEY, I'M NATHAN DEMOSS</h1>
     <p>I'm 15 from Raleigh.</p>
-    <p>I've been building things for 5,475 days.</p>
+    <p id="daysBuilt">I've been building things for <span id="daysCount"></span> days.</p>
     <div class="achievements">
       <h2>A FEW ACHIEVEMENTS:</h2>
       <ul>
+        <li>· Created an app with over 500 users (Spark AI)</li>
         <li>· Won 5 hackathons</li>
         <li>· Won Science Olympiad States</li>
-        <li>· Created an app with over 500 users (Spark AI)</li>
       </ul>
     </div>
     <div class="projects">
-      <h2>SOME PROJECTS I'M WORKING ON:</h2>
+      <h2>PROJECTS WORKED/COLLABORATING ON:</h2>
       <ul>
         <li><a href="https://spark-ai-website.vercel.app">spark-ai-website.vercel.app</a> - Spark AI (desktop AI assistant)</li>
         <li><a href="https://docu-ai-git.vercel.app/">docu-ai-git.vercel.app</a> - DocuAI (README file generator)</li>
-        <li><a href="https://api-key-database.vercel.app/">api-key-database.vercel.app</a> - API key database</li>
+        <li><a href="https://www.osis.co/">www.osis.co</a> - OSIS (AI investing partner)</li>
       </ul>
     </div>
-    <div class="tl-dr">
+    <div class="languages">
+      <h2>LANGUAGES I KNOW:</h2>
+      <p>Python, HTML, CSS, Java, JavaScript, React, Lua, Rust, C#</p>
+    </div>
+    <div class="goals">
       <h3>MY GOALS FOR THIS YEAR:</h3>
       <p>Reaching $500 MRR</p>
       <p>Reaching over 1000 users (Spark AI)</p>
@@ -109,5 +154,15 @@
       <p>Finding a co-founder</p>
     </div>
   </div>
+  <script>
+    function updateDays() {
+      const startDate = new Date('2023-08-20');
+      const today = new Date();
+      const diffTime = Math.abs(today - startDate);
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      document.getElementById('daysCount').textContent = diffDays;
+    }
+    updateDays();
+  </script>
 </body>
 </html>
