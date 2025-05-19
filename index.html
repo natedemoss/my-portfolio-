@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathan DeMoss</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      padding: 10px 0;
+      background-color: #fff;
+    }
+    header a {
+      color: #0056b3;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    header a:hover {
+      color: #ffeb3b;
+    }
+    .content {
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #0056b3;
+      animation: fadeIn 1s ease-in;
+    }
+    p, li {
+      color: #555;
+      animation: slideIn 1s ease-in;
+    }
+    .achievements, .projects {
+      margin: 20px 0;
+    }
+    .achievements ul, .projects ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .achievements li, .projects li {
+      margin: 10px 0;
+      background-color: #fff;
+      padding: 5px 10px;
+      border-left: 3px solid #0056b3;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .achievements li:hover, .projects li:hover {
+      transform: translateX(5px);
+    }
+    .projects a {
+      color: #0056b3;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .projects a:hover {
+      color: #ff5722;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="https://github.com/natedemoss">GITHUB</a> |
+    <a href="https://x.com/ndemoss28">X</a> |
+    <a href="https://www.linkedin.com/in/nate-demoss-5167a4268/">LINKEDIN</a>
+  </header>
+  <div class="content">
+    <h1>HEY, I'M NATHAN DEMOSS</h1>
+    <p>I'm 15 from Raleigh.</p>
+    <p>I've been building things for 5,475 days.</p>
+    <div class="achievements">
+      <h2>A FEW ACHIEVEMENTS:</h2>
+      <ul>
+        <li>· Won 5 hackathons</li>
+        <li>· Won Science Olympiad States</li>
+        <li>· Created an app with over 500 users (Spark AI)</li>
+      </ul>
+    </div>
+    <div class="projects">
+      <h2>SOME PROJECTS I'M WORKING ON:</h2>
+      <ul>
+        <li><a href="https://spark-ai-website.vercel.app">spark-ai-website.vercel.app</a> - Spark AI (desktop AI assistant)</li>
+        <li><a href="https://docu-ai-git.vercel.app/">docu-ai-git.vercel.app</a> - DocuAI (README file generator)</li>
+        <li><a href="https://api-key-database.vercel.app/">api-key-database.vercel.app</a> - API key database</li>
+      </ul>
+    </div>
+    <div class="tl-dr">
+      <h3>MY GOALS FOR THIS YEAR:</h3>
+      <p>Reaching $500 MRR</p>
+      <p>Reaching over 1000 users (Spark AI)</p>
+      <p>Reaching 500 followers (X)</p>
+      <p>Finding a co-founder</p>
+    </div>
+  </div>
+</body>
+</html>
